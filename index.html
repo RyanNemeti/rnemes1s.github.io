@@ -28,5 +28,24 @@
       <div class="div3">
         <video src="box.MOV" alt="box">
       </div>
+        <pre>crickit.servo1.setAngle(180)
+crickit.servo2.setAngle(0)
+forever(function () {
+    if (crickit.touch1.touchRead() >= 800) {
+        pause(2000)
+        crickit.servo1.setAngle(90)
+        pause(100)
+        pause(1000)
+        crickit.servo2.setAngle(180)
+        pause(30000)
+        crickit.servo1.setAngle(180)
+        pause(1000)
+        crickit.servo2.setAngle(0)
+    }
+})
+forever(function () {
+    light.graph(crickit.touch1.touchRead(), 1000)
+})
+</pre>
     </body>
 </html>
